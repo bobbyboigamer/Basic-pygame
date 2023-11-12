@@ -1,0 +1,2 @@
+
+        if position > HEIGHT:
