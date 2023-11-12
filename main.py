@@ -1,14 +1,17 @@
 import pygame
 
 WIDTH, HEIGHT = (510, 512.5)
+clock = pygame.time.Clock()
 
 pygame.init()
 
+# Main Initialization
+
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Dodge the hands!")
-
 background = pygame.image.load('checkerboard.png')
-clock = pygame.time.Clock()
+icon = pygame.image.load('my_icon.png') 
+pygame.display.set_icon(icon)
 
 def background_update(scrollPosition):
     window.blit(background, (0, scrollPosition))
