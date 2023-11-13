@@ -27,7 +27,7 @@ def music_update():
         5: 'Final_song.mp3',
     }
 
-    for i in range(1, 5):
+    for i in range(len(music)):
         pygame.mixer.music.load(music[i])
         pygame.mixer.music.play()
         pygame.time.delay(1000) 
