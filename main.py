@@ -10,7 +10,7 @@ pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Dodge the hands!")
 background = pygame.image.load('checkerboard.png')
-icon = pygame.image.load('my_icon.png') 
+icon = pygame.image.load('err.webp') 
 pygame.display.set_icon(icon)
 
 def background_update(scrollPosition):
@@ -36,9 +36,7 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
-        scrollPosition += 1
-        scrollPosition %= HEIGHT + 1
-
+        scrollPosition = (scrollPosition + 1) % (HEIGHT + 1)
         background_update(scrollPosition)
         music_update()
         clock.tick(60)
