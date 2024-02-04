@@ -16,7 +16,7 @@ pygame.display.set_caption("Dodge the hands!")
 background = pygame.image.load('Images/checkerboard.png')
 icon = pygame.image.load('Images/err.webp') 
 pygame.display.set_icon(icon)
-user = User(speed=2.5, health=100)
+user = User(speed=2.5, health=100, size=(75,75))
 
 def background_update(scrollPosition):
     window.blit(background, (0, scrollPosition))

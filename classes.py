@@ -7,13 +7,15 @@ class Hands:
     self.length = length
 
 class User:
-    def __init__(self, speed, health):
+    def __init__(self, speed, health, size):
         self.speed = speed
         self.health = health
+        self.size = size
         self.sprite = pygame.image.load('Images/err.webp')
+        self.sprite = pygame.transform.scale(self.sprite, self.size)
         self.rect = self.sprite.get_rect()
-        self.rect.x = 207.5
-        self.rect.y = 400
+        self.rect.centerx = 510 / 2
+        self.rect.bottom = 500
         self.acc = pygame.Vector2(0, 0)
 
     def update(self):
